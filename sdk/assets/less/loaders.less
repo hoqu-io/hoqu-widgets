@@ -1,0 +1,65 @@
+.loader-icon {
+  display: block;
+  background: url(../images/icon-loader.svg) no-repeat 0 0;
+  background-size: @loader-size;
+  text-indent: -9999px;
+  width: @loader-size;
+  height: @loader-size;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+body {
+  &.loading {
+    overflow: hidden;
+
+    .app-loader {
+      display: block;
+      opacity: 1;
+      transition: opacity @transition-duration-loader-fade-in ease @transition-duration-loader-fade-in-delay;
+    }
+  }
+
+  &.loader-fade-out {
+    .app-loader {
+      display: block;
+      opacity: 0.01;
+      transition: opacity @transition-duration-loader-fade-out;
+    }
+  }
+}
+
+.app-loader {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0.01;
+
+  div {
+    text-align: center;
+    position: absolute;
+    height: 155px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    h2 {
+      font-weight: normal;
+    }
+  }
+
+  span {
+    .loader-icon();
+  }
+}
+
+.app {
+  opacity: 1;
+  transition: opacity @transition-duration-app-fade-in ease @transition-duration-loader-fade-out;
+}

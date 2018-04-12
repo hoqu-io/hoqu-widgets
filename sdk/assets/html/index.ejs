@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="loading">
+  <!--[if lt IE 10]>
+    <div class="old-browser">
+      <h1><%= htmlWebpackPlugin.options.title %></h1>
+
+      <h2>Your browser is not supported</h2>
+    </div>
+  <![endif]-->
+
+  <!--[if gte IE 10]><!-->
+    <!-- loader -->
+    <div class="app-loader">
+      <div>
+        <h2>loading...</h2>
+
+        <span>loading...</span>
+      </div>
+    </div>
+    <!-- /loader -->
+
+    <div class="website-wrapper">
+        <div id="ad1" class="ad">Ad</div>
+        <div id="ad2" class="ad">Ad</div>
+        <div id="ad3" class="ad">Ad</div>
+        <div class="website-text">Main website page</div>
+        <div id="app" class="app"></div>
+        <div id="ad4" class="ad">Ad</div>
+    </div>
+  <!--<![endif]-->
+</body>
+</html>

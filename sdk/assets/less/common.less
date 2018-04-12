@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: @font-family;
+  background-color: @bg-color;
+  overflow-x: hidden;
+  line-height: @line-height;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #2196f3;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+* {
+  outline: none !important;
+
+  &:active,
+  &:focus {
+    outline: none !important;
+  }
+}
+
+@keyframes highlight {
+  10% {background-color: #7ccef5;}
+}
+.highlighted {
+  animation: highlight 1s;
+}
